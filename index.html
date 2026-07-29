@@ -160,17 +160,6 @@
         </div>
       </div>
 
-      <div class="calc-grid">
-        <div class="field">
-          <label class="hint">Gasto mínimo con TC para cubrir el 100% del fee anual · Primer año</label>
-          <input type="text" id="gastoMinY1" disabled />
-        </div>
-        <div class="field">
-          <label class="hint">Gasto mínimo con TC para cubrir el 100% del fee anual · Segundo año</label>
-          <input type="text" id="gastoMinY2" disabled />
-        </div>
-      </div>
-
       <div class="module">
         <div class="module-head"><span>🧾 Ahorro por Automatización de Facturas</span><label class="toggle"><input type="checkbox" id="chkFacturas" checked/></label></div>
         <div class="module-note">Legalización de peajes y combustible vía agente de IA en WhatsApp, en vez de captura manual.</div>
@@ -288,8 +277,6 @@ function recalc(){
   const ahorroY2 = ahorroGMF + ahorroFacturas + ahorroRetiros;
 
   document.getElementById('gmfPreview').value = fmtCOP(ahorroGMF) + ' / año (0.4%)';
-  document.getElementById('gastoMinY1').value = fmtCOP(costoAnualCOP - ahorroCashback - ahorroGMF);
-  document.getElementById('gastoMinY2').value = fmtCOP(costoAnualCOP - ahorroGMF);
   document.getElementById('outGMF').textContent = fmtCOP(ahorroGMF);
   document.getElementById('outCashback').textContent = fmtCOP(ahorroCashback);
   document.getElementById('outFacturas').textContent = chkFacturas ? fmtCOP(ahorroFacturas) : 'Desactivado';
