@@ -48,7 +48,7 @@
   .cc-world-elite{width:190px;height:245px;}
   .cc-world-elite img{object-position:top center;}
   .cc-corporate{width:260px;height:156px;}
-  .cc-virtual{width:230px;height:139px;}
+  .cc-virtual{width:230px;height:139px;background:#fff;}
   .cc-proveedores{width:280px;height:115px;}
   .cc-caption{margin-top:8px;font-size:11px;color:var(--text-dim);text-align:center;text-transform:uppercase;letter-spacing:0.5px;}
   .cc-col{display:flex;flex-direction:column;align-items:center;}
@@ -141,7 +141,7 @@
         </div>
         <div class="field">
           <label>Valor Anual del Plan (USD)</label>
-          <input type="number" id="valorPlanUSD" value="24000" step="500" />
+          <input type="number" id="valorPlanUSD" value="36000" step="500" />
         </div>
         <div class="field">
           <label>TRM del día (COP/USD)</label>
@@ -175,11 +175,15 @@
         <div class="module-head"><span>🏧 Ahorro en Retiros en Efectivo</span><label class="toggle"><input type="checkbox" id="chkRetiros" checked/></label></div>
         <div class="calc-grid">
           <div class="field"><label>Monto de efectivo mensual (COP)</label><input type="number" id="gastoRetiros" value="1350000000" step="10000000" /></div>
-          <div class="field"><label>Porcentaje de la comisión (%)</label><input type="number" id="comisionRetiros" value="1" step="0.1" /></div>
+          <div class="field">
+            <label>Porcentaje de la comisión negociada (%)</label>
+            <input type="number" id="comisionRetiros" value="2" step="0.1" />
+            <span class="hint">vs. 3% tarifa estándar Jeeves — el ahorro aplica si lo negociado es menor</span>
+          </div>
         </div>
       </div>
 
-      <h3 style="font-size:14px;color:var(--gold);text-transform:uppercase;letter-spacing:1px;margin:22px 0 4px;">Ahorros por rubro</h3>
+      <h3 style="font-size:14px;color:var(--gold);text-transform:uppercase;letter-spacing:1px;margin:22px 0 4px;">Ahorros por rubro · Anual</h3>
       <div class="savings-grid">
         <div class="save-card"><div class="label">Ahorro 4x1000 (GMF)</div><div class="value" id="outGMF">—</div></div>
         <div class="save-card"><div class="label">Cashback 1% · 6 meses</div><div class="value" id="outCashback">—</div></div>
